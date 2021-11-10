@@ -29,7 +29,7 @@ def handle_question():
 
     if(len(responses) ==
 len(survey.questions)):
-        return redirect("/complete")
+        return redirect("/done")
     else:
         return redirect(f"/questions/{len(responses)}")
 
@@ -53,5 +53,5 @@ len (survey.questions)):
         "question.html", question_num=qid, question=question)
 
 @app.route("/done")
-def complete():
-    return render_template("completion.html")
+def done():
+    return render_template("done.html")
